@@ -17,7 +17,8 @@ Este repositório tem como objetivo:
 Os códigos estão organizados de acordo com os desafios propostos:
 
 - **`challenge-04.py`**: _Verificação de sites ativos (Status HTTP)._
-
+- **`challenge-05.py`**: _"Negociador de Moedas" (Scraping em sites)_
+- 
 ---
 
 ## 🚀 Tecnologias Utilizadas
