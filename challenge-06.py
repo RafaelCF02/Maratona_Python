@@ -82,7 +82,14 @@ def consultar_codigo(lista_paises):
 
     valor_convertido = converter_moeda(pais_origem['codigo'], pais_destino['codigo'], quantia)
     if valor_convertido:
-        print(f"\nO valor convertido é {format_currency(valor_convertido, pais_destino['codigo'], locale='en_US')}.")
+        # Formatar valor com código da moeda após o número
+        valor_formatado = format_currency(
+            valor_convertido, "", locale="pt_BR"
+        ).strip()  # Sem o código da moeda
+        valor_formatado = f"{valor_formatado} {pais_destino['codigo']}"  # Adiciona o código após o número
+
+        print(f"\nO valor convertido é {valor_formatado}.\n")
+
 
 # Função principal do programa, para mostrar o painel
 def inicio_programa():
