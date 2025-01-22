@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maratona News</title>
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>Maratona News</h1>
+    <div>
+      {% if order_by == "news" %}
+        <a href="/?order_by=popular">Popular</a>
+        <a href="/?order_by=news"><strong>Notícias Recentes</strong></a>
+      {% else %}
+        <a href="/?order_by=popular"><strong>Populares</strong></a>
+        <a href="/?order_by=news">Notícias Recentes</a>
+      {% endif %}
+    </div>
+  </header>
+  <main>
+    {% for resultado in resultados %}
+      <div>
+        <div>
+          <a href="/{{ resultado.objectID }}">
+            <h3>{{resultado.title}}</h3>
+          </a>
+          <a href="{{ resultado.url }}" target="_blank">{{ resultado.url }}</a>
+        </div>
+        <div>
+          {{ resultado.points }} pontos | Por: {{ resultado.author }} | {{ resultado.num_comments }} comentários
+        </div>
+      </div>
+      <hr />
+    {% endfor %}
+  </main>
+</body>
+</html>

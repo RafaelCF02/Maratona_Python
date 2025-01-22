@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes da Matéria</title>
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>Detalhes da Matéria</h1>
+    <div>
+      <p>{{ resultados.points }} pontos | Por: {{ resultados.author }}</p>
+    </div>
+  </header>
+  <main>
+    {% for comentario in resultados.children %}
+      <div>
+        <h3>{{ comentario.author }}</h3>
+        <p>{{ comentario.text | safe }}</p>
+      </div>
+      <hr />
+    {% endfor %}
+  </main>
+</body>
+</html>
