@@ -19,6 +19,7 @@ Os códigos estão organizados de acordo com os desafios propostos:
 - **`challenge-04.py`**: _Verificação de sites ativos (Status HTTP)._
 - **`challenge-05.py`**: _"Negociador de Moedas" (Scraping em sites)_
 - **`challenge-06.py`**: _"Negociador de moedas", Atualizado, permitindo conversões de uma moeda para outra_
+- **`challenge-07`**: _Uso da biblioteca Flask (criação de sites para acompanhamento de noticias)_
 ---
 
 ## 🚀 Tecnologias Utilizadas
